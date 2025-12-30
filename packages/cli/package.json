@@ -13,7 +13,7 @@
     "simstudio": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "bun run build"
   },
