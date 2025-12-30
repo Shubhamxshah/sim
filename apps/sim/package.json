@@ -8,12 +8,12 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "next dev --port 3000",
-    "dev:webpack": "next dev --webpack",
-    "dev:sockets": "bun run socket/index.ts",
-    "dev:full": "concurrently -n \"App,Realtime\" -c \"cyan,magenta\" \"bun run dev\" \"bun run dev:sockets\"",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev --port 3000",
+    "dev:webpack": "node init && next dev --webpack",
+    "dev:sockets": "node init && bun run socket/index.ts",
+    "dev:full": "node init && concurrently -n \"App,Realtime\" -c \"cyan,magenta\" \"bun run dev\" \"bun run dev:sockets\"",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "prepare": "cd ../.. && bun husky",
     "test": "vitest run",
     "test:watch": "vitest",

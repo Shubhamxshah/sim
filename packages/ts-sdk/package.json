@@ -10,9 +10,9 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "type-check": "tsc --noEmit",
-    "dev:watch": "tsc --watch",
+    "dev:watch": "node init && tsc --watch",
     "prepublishOnly": "bun run build",
     "test": "vitest run",
     "test:watch": "vitest"
